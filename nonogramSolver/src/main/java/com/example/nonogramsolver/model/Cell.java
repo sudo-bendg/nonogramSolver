@@ -1,3 +1,5 @@
+package com.example.nonogramsolver.model;
+
 public class Cell {
   public enum CellState {
     FILLED,
@@ -27,9 +29,9 @@ public class Cell {
   }
 
   public void setCell(String newStateStr) {
-    if (newStateStr.toLowerCase() == "filled") {
+    if (newStateStr != null && "filled".equals(newStateStr.toLowerCase())) {
       this.state = CellState.FILLED;
-    } else if (newStateStr.toLowerCase() == "empty") {
+    } else if (newStateStr != null && "empty".equals(newStateStr.toLowerCase())) {
       this.state = CellState.EMPTY;
     } else {
       this.state = CellState.UNCERTAIN;
