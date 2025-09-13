@@ -21,7 +21,7 @@ public class Board {
     this.grid[x][y].setCell(value);
   }
 
-  public String getCell(int x, int y) {
+  public char getCell(int x, int y) {
     return this.grid[x][y].getCell();
   }
 
