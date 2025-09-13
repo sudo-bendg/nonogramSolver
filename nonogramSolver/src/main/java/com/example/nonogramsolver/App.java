@@ -1,4 +1,4 @@
-package com.example.nonogramSolver;
+package com.example.nonogramsolver;
 
 /**
  * Hello world!
