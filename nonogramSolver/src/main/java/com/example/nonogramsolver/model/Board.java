@@ -1,13 +1,9 @@
 package com.example.nonogramsolver.model;
 
 public class Board {
-  private int xSize;
-  private int ySize;
   private Cell[][] grid;
 
   public Board(int xSize, int ySize) {
-    this.xSize = xSize;
-    this.ySize = ySize;
     this.grid = new Cell[xSize][ySize];
     
     for (int i = 0; i < xSize; i++) {
@@ -27,6 +23,10 @@ public class Board {
 
   public Cell.CellState getCellState(int x, int y) {
     return this.grid[x][y].getState();
+  }
+
+  public Cell[][] getGrid() {
+    return this.grid;
   }
 
   public String getGridString() {
